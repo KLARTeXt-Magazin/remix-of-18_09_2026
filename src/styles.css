@@ -2031,6 +2031,9 @@ footer.bg-primary {
   --band-pop: var(--chartreuse);
   --band-ink: var(--pearl);
   --band-focus: var(--honeydew);
+
+  background: var(--band-deep);
+  color: var(--band-ink);
 }
 
 /* 2 · Heiligabend — Wine + Lavender */
@@ -2042,6 +2045,9 @@ footer.bg-primary {
   --band-pop: #FAA3FC;
   --band-ink: var(--pearl);
   --band-focus: var(--lavender);
+
+  background: var(--band-deep);
+  color: var(--band-ink);
 }
 
 /* 3 · Ein kleiner Moment — Deep Violet + Lilac */
@@ -2053,6 +2059,9 @@ footer.bg-primary {
   --band-pop: var(--periwinkle);
   --band-ink: var(--pearl);
   --band-focus: var(--lilac);
+
+  background: var(--band-deep);
+  color: var(--band-ink);
 }
 
 /* 4 · PMR — bewusst ruhig und hell */
@@ -2064,6 +2073,9 @@ footer.bg-primary {
   --band-pop: var(--mint-soft);
   --band-ink: var(--deep-green-1b);
   --band-focus: var(--deep-green-1b);
+
+  background: var(--band-deep);
+  color: var(--band-ink);
 }
 
 
