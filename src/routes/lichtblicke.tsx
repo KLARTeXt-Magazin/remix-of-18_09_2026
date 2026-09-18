@@ -23,10 +23,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Download, Menu } from "lucide-react";
 
-import coverMoment from "../assets/cover-pmr-editorial.jpg";
-import coverNikolausNeu from "../assets/cover-nikolaus-editorial.jpg";
-import coverGrussNeu from "../assets/cover-heiligabend-editorial.jpg";
-import coverMomentNeu from "../assets/cover-moment-editorial.jpg";
+import coverMoment from "../assets/cover-pmr-abstract-v2.jpg";
+import coverNikolausNeu from "../assets/cover-nikolaus-abstract-v2.jpg";
+import coverGrussNeu from "../assets/cover-heiligabend-abstract-v2.jpg";
+import coverMomentNeu from "../assets/cover-moment-abstract-v2.jpg";
 
 import {
   AudioCard,
@@ -175,7 +175,7 @@ const tracks: AudioTrack[] = [
       "Ein kurzer Moment aus dem Adventskalender – zum Anhören am 6. Dezember.",
     cover: coverNikolausNeu,
     coverAlt:
-      "Eine Hand legt ein kleines blaues Geschenk neben eine Karte auf einen petrolfarbenen Tisch",
+      "Abstraktes petrolfarbenes Stillleben mit Büttenpapier, Keramik, Leinen und winterlichem Zweig",
     src: "/audio/2026-q4_extra01.m4a",
     ...(PREVIEW_UNLOCKED
       ? {}
@@ -200,7 +200,7 @@ const tracks: AudioTrack[] = [
       "Der zweite Lichtblick aus dem Adventskalender – zum Anhören an Heiligabend.",
     cover: coverGrussNeu,
     coverAlt:
-      "Zwei Menschen reichen sich an einem weinrot gedeckten Tisch eine Keramiktasse",
+      "Abstraktes weinrotes Stillleben mit Wollstoff, Lavendelpapier, Keramikschale und Kerze",
     src: "/audio/2026-q4_extra02.m4a",
     ...(PREVIEW_UNLOCKED
       ? {}
@@ -225,7 +225,7 @@ const tracks: AudioTrack[] = [
       "Eine kurze Auszeit für dich, jederzeit abrufbar. Den Impuls kannst du dir auch ausdrucken.",
     cover: coverMomentNeu,
     coverAlt:
-      "Eine Person sitzt mit einer fliederfarbenen Notiz am Fenster und hält einen Moment inne",
+      "Abstraktes violettes Stillleben mit gerissenem Papier, Keramikring, Faden und gefaltetem Stoff",
     src: "/audio/2026-q4_extra03.m4a",
     downloadUrl:
       "/pdf/2026-q4_Auszeit01.pdf",
@@ -245,7 +245,7 @@ const tracks: AudioTrack[] = [
       "Eine kurze Übung: Muskelgruppen bewusst anspannen und wieder lösen. Die ausführliche Anleitung findest du weiter unten.",
     cover: coverMoment,
     coverAlt:
-      "Hände spannen einen dunkelblauen Stoff an und lassen ihn anschließend wieder los",
+      "Abstraktes mitternachtsblaues Stoffbild mit geraffter Spannung und lavendelfarbenem Keramikstein",
     src:
       "/audio/2026-q4_extra03.m4a",
     credit:
@@ -544,10 +544,10 @@ function Lichtblicke() {
 
               <SheetContent
                 side="right"
-                className="issue-sheet w-[92%] border-0 bg-transparent p-3 shadow-none sm:max-w-sm"
+                className="issue-sheet w-full border-0 bg-transparent p-0 shadow-none sm:w-[92%] sm:max-w-sm sm:p-3"
               >
                 <LiquidGlass
-                  className="issue-panel h-full w-full overflow-y-auto rounded-[2rem]"
+                  className="issue-panel h-full w-full overflow-y-auto rounded-none sm:rounded-[2rem]"
                   intensity="strong"
                 >
                   <div className="px-7 py-10">
@@ -676,7 +676,7 @@ function Lichtblicke() {
            ================================================= */}
 
         <section
-          className={`hero-presentation mx-auto w-full max-w-[430px] px-5 pb-10 pt-24 sm:px-7 ${
+          className={`hero-presentation mx-auto w-full max-w-[430px] px-5 pb-10 sm:px-7 ${
             presentationCompact
               ? "is-compact"
               : ""
