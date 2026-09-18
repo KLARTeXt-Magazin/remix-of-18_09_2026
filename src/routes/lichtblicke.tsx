@@ -23,10 +23,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Download, Menu } from "lucide-react";
 
-import coverMoment from "../assets/cover-pmr-tactile.jpg";
-import coverNikolausNeu from "../assets/cover-nikolaus-tactile.jpg";
-import coverGrussNeu from "../assets/cover-heiligabend-tactile.jpg";
-import coverMomentNeu from "../assets/cover-moment-tactile.jpg";
+import coverMoment from "../assets/cover-pmr-editorial.jpg";
+import coverNikolausNeu from "../assets/cover-nikolaus-editorial.jpg";
+import coverGrussNeu from "../assets/cover-heiligabend-editorial.jpg";
+import coverMomentNeu from "../assets/cover-moment-editorial.jpg";
 
 import {
   AudioCard,
@@ -175,7 +175,7 @@ const tracks: AudioTrack[] = [
       "Ein kurzer Moment aus dem Adventskalender – zum Anhören am 6. Dezember.",
     cover: coverNikolausNeu,
     coverAlt:
-      "Handgeschöpftes Papier, Olivenzweig und blaue Keramik auf Leinen",
+      "Eine Hand legt ein kleines blaues Geschenk neben eine Karte auf einen petrolfarbenen Tisch",
     src: "/audio/2026-q4_extra01.m4a",
     ...(PREVIEW_UNLOCKED
       ? {}
@@ -200,7 +200,7 @@ const tracks: AudioTrack[] = [
       "Der zweite Lichtblick aus dem Adventskalender – zum Anhören an Heiligabend.",
     cover: coverGrussNeu,
     coverAlt:
-      "Weinroter Stoff auf fliederfarbenem Papier mit kleiner Porzellanform",
+      "Zwei Menschen reichen sich an einem weinrot gedeckten Tisch eine Keramiktasse",
     src: "/audio/2026-q4_extra02.m4a",
     ...(PREVIEW_UNLOCKED
       ? {}
@@ -225,7 +225,7 @@ const tracks: AudioTrack[] = [
       "Eine kurze Auszeit für dich, jederzeit abrufbar. Den Impuls kannst du dir auch ausdrucken.",
     cover: coverMomentNeu,
     coverAlt:
-      "Fliederfarbenes Büttenpapier mit Keramikring und olivfarbenem Faden",
+      "Eine Person sitzt mit einer fliederfarbenen Notiz am Fenster und hält einen Moment inne",
     src: "/audio/2026-q4_extra03.m4a",
     downloadUrl:
       "/pdf/2026-q4_Auszeit01.pdf",
@@ -245,7 +245,7 @@ const tracks: AudioTrack[] = [
       "Eine kurze Übung: Muskelgruppen bewusst anspannen und wieder lösen. Die ausführliche Anleitung findest du weiter unten.",
     cover: coverMoment,
     coverAlt:
-      "Helle und fliederfarbene Stofffalten mit dunkler Tonform",
+      "Hände spannen einen dunkelblauen Stoff an und lassen ihn anschließend wieder los",
     src:
       "/audio/2026-q4_extra03.m4a",
     credit:
@@ -790,6 +790,9 @@ function Lichtblicke() {
                     }
                     onPlay={
                       setActiveId
+                    }
+                    tone={
+                      (["petrol", "wine", "violet", "midnight"] as const)[index] ?? "wine"
                     }
                   />
 

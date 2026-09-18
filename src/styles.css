@@ -1972,6 +1972,8 @@ footer.bg-primary {
   --lilac: #C4AEF4;
   --periwinkle: #9A9FDA;
   --mint-soft: #83BE9D;
+  --deep-petrol: #0B3D3A;
+  --ice-soft: #E5FAF9;
 }
 
 
@@ -2022,13 +2024,13 @@ footer.bg-primary {
    AUSGABE 02 — vier Welten
    ------------------------------------------------------- */
 
-/* 1 · Nikolaus — Deep Olive + Honeydew */
+/* 1 · Nikolaus — Deep Petrol + Ice */
 .audio-band.audio-tone-1,
 .companion-band.companion-tone-1 {
-  --band-deep: var(--deep-olive);
-  --band-deep-alt: #0F2400;
-  --band-soft: var(--honeydew);
-  --band-pop: var(--chartreuse);
+  --band-deep: var(--deep-petrol);
+  --band-deep-alt: color-mix(in srgb, var(--deep-petrol) 88%, var(--midnight));
+  --band-soft: var(--ice-soft);
+  --band-pop: var(--ice-soft);
   --band-ink: var(--pearl);
   --band-focus: var(--honeydew);
 
@@ -2064,15 +2066,15 @@ footer.bg-primary {
   color: var(--band-ink);
 }
 
-/* 4 · PMR — bewusst ruhig und hell */
+/* 4 · PMR — Midnight + Lavender, ruhig aber farbig */
 .audio-band.audio-tone-4,
 .companion-band.companion-tone-4 {
-  --band-deep: var(--pearl);
-  --band-deep-alt: #F4F7F1;
-  --band-soft: var(--mint-soft);
-  --band-pop: var(--mint-soft);
-  --band-ink: var(--deep-green-1b);
-  --band-focus: var(--deep-green-1b);
+  --band-deep: var(--midnight);
+  --band-deep-alt: color-mix(in srgb, var(--midnight) 88%, var(--deep-violet-341));
+  --band-soft: var(--lavender);
+  --band-pop: var(--lavender);
+  --band-ink: var(--pearl);
+  --band-focus: var(--lavender);
 
   background: var(--band-deep);
   color: var(--band-ink);
@@ -2138,7 +2140,95 @@ footer.bg-primary {
 }
 
 .audio-tone-4 .audio-player-card .bg-primary {
-  background: var(--deep-green-1b);
+  background: var(--midnight);
+}
+
+
+/* Höransicht übernimmt die Farbwelt des jeweiligen Audios */
+
+.listening-mode {
+  --listening-deep: var(--wine-4a);
+  --listening-soft: var(--blush-soft);
+  --listening-ink: var(--pearl);
+  background: var(--listening-deep);
+  color: var(--listening-ink);
+}
+
+.listening-tone-petrol {
+  --listening-deep: var(--deep-petrol);
+  --listening-soft: var(--ice-soft);
+}
+
+.listening-tone-wine {
+  --listening-deep: var(--wine-4a);
+  --listening-soft: var(--pink-soft);
+}
+
+.listening-tone-violet {
+  --listening-deep: var(--deep-violet-341);
+  --listening-soft: var(--lilac);
+}
+
+.listening-tone-midnight {
+  --listening-deep: var(--midnight);
+  --listening-soft: var(--lavender);
+}
+
+.listening-mode__wash {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--listening-deep) 8%, transparent) 8%,
+    color-mix(in srgb, var(--listening-deep) 58%, transparent) 48%,
+    var(--listening-deep) 100%
+  );
+}
+
+.listening-mode .text-listening,
+.listening-mode .text-listening-muted {
+  color: var(--listening-ink);
+}
+
+.listening-mode .text-listening-muted {
+  opacity: 0.82;
+}
+
+.listening-mode .listening-control {
+  border-color: color-mix(in srgb, var(--listening-soft) 48%, transparent);
+  background: color-mix(in srgb, var(--listening-soft) 16%, transparent);
+  color: var(--listening-ink);
+}
+
+.listening-mode .listening-play {
+  background: var(--listening-soft);
+  color: var(--listening-deep);
+  box-shadow: 0 16px 34px color-mix(in srgb, var(--listening-deep) 42%, transparent);
+}
+
+.listening-mode .listening-range::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    var(--listening-soft) 0 var(--player-progress),
+    color-mix(in srgb, var(--listening-ink) 28%, transparent) var(--player-progress) 100%
+  );
+}
+
+.listening-mode .listening-range::-moz-range-track {
+  background: color-mix(in srgb, var(--listening-ink) 28%, transparent);
+}
+
+.listening-mode .listening-range::-moz-range-progress,
+.listening-mode .listening-range::-webkit-slider-thumb,
+.listening-mode .listening-range::-moz-range-thumb {
+  background: var(--listening-soft);
+}
+
+.listening-mode .listening-range::-webkit-slider-thumb,
+.listening-mode .listening-range::-moz-range-thumb {
+  border-color: var(--listening-deep);
+}
+
+.listening-mode :focus-visible {
+  outline-color: var(--listening-soft);
 }
 
 

@@ -76,10 +76,12 @@ export function AudioCard({
   track,
   isActive,
   onPlay,
+  tone,
 }: {
   track: AudioTrack;
   isActive: boolean;
   onPlay: (id: string | null) => void;
+  tone: "wine" | "petrol" | "violet" | "midnight";
 }) {
 
   // -----------------------------------------------------
@@ -364,11 +366,7 @@ export function AudioCard({
   return (
     <>
       <article
-        className={`audio-player-card relative overflow-hidden rounded-[1.35rem] border p-3 ${
-          isActive
-            ? "is-active"
-            : "is-dimmed"
-        }`}
+        className="audio-player-card is-active relative overflow-hidden rounded-[1.35rem] border p-3"
         aria-label={track.title}
       >
 
@@ -538,6 +536,7 @@ export function AudioCard({
             seconds,
           );
         }}
+        tone={tone}
       />
     </>
   );
