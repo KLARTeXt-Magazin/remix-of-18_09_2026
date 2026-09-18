@@ -282,6 +282,7 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     letter-spacing: 0;
+    overscroll-behavior-y: none;
   }
 
   button,
@@ -448,6 +449,9 @@
    ======================================================= */
 
 .floating-site-header {
+  min-height: calc(4rem + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
+
   background:
     color-mix(
       in oklab,
@@ -464,6 +468,10 @@
     background-color 300ms ease,
     border-color 300ms ease,
     backdrop-filter 300ms ease;
+}
+
+.site-header-inner {
+  height: 4rem;
 }
 
 
@@ -502,6 +510,7 @@
 
 .hero-presentation {
   transform-origin: top center;
+  padding-top: calc(6rem + env(safe-area-inset-top));
 
   transition:
     opacity 420ms ease,
@@ -1960,6 +1969,7 @@ footer.bg-primary {
 :root {
   --deep-wine-550: #550000;
   --wine-4a: #4A0404;
+  --wine-espresso: #2A0507;
   --deep-olive: #142E00;
   --deep-violet-341: #341C67;
   --deep-green-1b: #1B2518;
@@ -2012,11 +2022,20 @@ footer.bg-primary {
 .audio-band--ausgabe-1,
 .companion-band--ausgabe-1 {
   --band-deep: var(--deep-wine-550);
-  --band-deep-alt: var(--wine-4a);
+  --band-deep-alt: var(--wine-espresso);
   --band-soft: var(--blush-soft);
   --band-pop: var(--pink-soft);
   --band-ink: var(--pearl);
   --band-focus: var(--blush-soft);
+}
+
+.audio-band--ausgabe-1 {
+  border-bottom: 1px solid color-mix(in srgb, var(--blush-soft) 34%, transparent);
+  box-shadow: inset 0 -1px 0 color-mix(in srgb, var(--wine-espresso) 58%, transparent);
+}
+
+.companion-band--ausgabe-1 {
+  border-top: 1px solid color-mix(in srgb, var(--blush-soft) 44%, transparent);
 }
 
 
@@ -2127,6 +2146,22 @@ footer.bg-primary {
 
 .audio-player-card .text-muted-foreground {
   color: var(--muted-foreground);
+}
+
+.audio-player-card .audio-cover-badge {
+  background: color-mix(in srgb, var(--band-deep, var(--wine-4a)) 82%, transparent);
+  border-color: color-mix(in srgb, var(--band-soft, var(--pearl)) 58%, transparent);
+  color: var(--pearl);
+}
+
+.section-cue-badge {
+  border: 1px solid color-mix(in srgb, var(--band-soft, var(--pearl)) 54%, transparent);
+  background: color-mix(in srgb, var(--band-soft, var(--pearl)) 14%, transparent);
+  color: color-mix(in srgb, var(--band-ink, var(--pearl)) 88%, transparent);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  backdrop-filter: blur(14px) saturate(125%);
+  -webkit-backdrop-filter: blur(14px) saturate(125%);
 }
 
 .audio-player-card .text-foreground {
@@ -2287,6 +2322,31 @@ footer.bg-primary {
   outline-color: var(--deep-green-1b);
 }
 
+
+/* Ausgaben-Menü bleibt bewusst farbarm */
+
+.issue-panel {
+  background: var(--pearl);
+  color: var(--foreground);
+  border-color: color-mix(in srgb, var(--foreground) 9%, transparent);
+  box-shadow:
+    -18px 0 54px color-mix(in srgb, var(--foreground) 10%, transparent),
+    inset 1px 0 0 color-mix(in srgb, var(--pearl) 90%, transparent);
+}
+
+.issue-entry {
+  border: 1px solid transparent;
+}
+
+.issue-entry-current {
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  border-color: color-mix(in srgb, var(--foreground) 12%, transparent);
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--foreground) 42%, transparent);
+}
+
+.issue-entry:hover {
+  background: color-mix(in srgb, var(--foreground) 4%, transparent);
+}
 
 /* Übergangsband bleibt warm-neutral */
 

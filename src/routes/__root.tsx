@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   {
     name: "viewport",
     content:
-      "width=device-width, initial-scale=1",
+      "width=device-width, initial-scale=1, viewport-fit=cover",
   },
 
   {
@@ -139,7 +139,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
   {
     name: "apple-mobile-web-app-status-bar-style",
-    content: "default",
+    content: "black-translucent",
   },
 
   {
