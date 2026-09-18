@@ -2220,3 +2220,20 @@ footer.bg-primary {
   background: var(--band-deep-alt);
   color: var(--band-ink);
 }
+
+
+/* Begleittext: Linie und Nebentexte folgen der Farbwelt */
+
+.companion-band[class*="companion-tone-"] .companion-inner,
+.companion-band--ausgabe-1 .companion-inner {
+  border-color: color-mix(in srgb, var(--band-soft) 70%, transparent);
+}
+
+.companion-band .text-muted-foreground,
+.audio-band .text-muted-foreground {
+  color: color-mix(in srgb, var(--band-ink) 86%, transparent);
+}
+
+.audio-player-card .text-muted-foreground {
+  color: var(--muted-foreground);
+}
