@@ -919,7 +919,7 @@ function Lichtblicke() {
 
 
                     {track.credit ? (
-                      <p className="mt-7 text-[10px] leading-5 text-muted-foreground/70">
+                      <p className="mt-7 text-[10px] leading-5 text-muted-foreground">
                         {
                           track.credit
                         }
