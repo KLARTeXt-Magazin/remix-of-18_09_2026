@@ -2212,3 +2212,11 @@ footer.bg-primary {
     transition: none;
   }
 }
+
+
+/* Begleittext-Fläche leicht tiefer als die Audiofläche */
+
+.companion-band.companion-band[class*="companion-tone-"] {
+  background: var(--band-deep-alt);
+  color: var(--band-ink);
+}
