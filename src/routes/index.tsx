@@ -25,7 +25,7 @@ import {
   Play,
 } from "lucide-react";
 
-import coverImageNeu from "@/assets/cover-moment-tactile.jpg";
+import coverImageNeu from "@/assets/cover-zeit-abstract-v2.jpg";
 import { LiquidGlass } from "@/components/liquid-glass";
 import { InstallAction } from "@/components/install-action";
 import { ListeningMode } from "@/components/listening-mode";
@@ -353,7 +353,7 @@ function Index() {
            ================================================= */}
 
         <section
-          className={`hero-presentation mx-auto w-full max-w-[430px] px-5 pb-12 pt-24 sm:px-7 ${
+          className={`hero-presentation mx-auto w-full max-w-[430px] px-5 pb-12 sm:px-7 ${
             hasScrolled || isPlaying
               ? "is-compact"
               : ""
@@ -367,12 +367,13 @@ function Index() {
              ================================================= */}
 
           <header
-            className={`floating-site-header fixed inset-x-0 top-0 z-50 mx-auto grid h-16 w-full max-w-[430px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:px-7 ${
+            className={`floating-site-header fixed inset-x-0 top-0 z-50 ${
               hasScrolled
                 ? "is-scrolled"
                 : ""
             }`}
           >
+            <div className="site-header-inner mx-auto grid w-full max-w-[430px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:px-7">
 
             {/* Magazin-Logo */}
             <div className="min-w-0">
@@ -410,10 +411,10 @@ function Index() {
 
               <SheetContent
                 side="right"
-                className="issue-sheet w-[92%] border-0 bg-transparent p-3 shadow-none sm:max-w-sm"
+                className="issue-sheet w-full border-0 bg-transparent p-0 shadow-none sm:w-[92%] sm:max-w-sm sm:p-3"
               >
                 <LiquidGlass
-                  className="issue-panel h-full w-full overflow-y-auto rounded-[2rem]"
+                  className="issue-panel h-full w-full overflow-y-auto rounded-none sm:rounded-[2rem]"
                   intensity="strong"
                 >
                   <div className="px-7 py-10">
@@ -501,6 +502,7 @@ function Index() {
                 </LiquidGlass>
               </SheetContent>
             </Sheet>
+            </div>
 
           </header>
 
@@ -548,13 +550,13 @@ function Index() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-[0.95rem]">
                 <img
                   src={coverImageNeu}
-                  alt="Handgeschöpftes fliederfarbenes Papier mit Keramikring auf sandfarbenem Leinen"
+                  alt="Abstraktes Stillleben aus rosafarbenem Büttenpapier, Weinrot, Leinen und feinem Faden"
                   width={1024}
                   height={1024}
                   className="h-full w-full object-cover"
                 />
 
-                <span className="absolute left-4 top-4 rounded-full border border-light/35 bg-surface/45 px-3 py-1.5 text-[9px] font-medium uppercase text-foreground backdrop-blur-xl">
+                <span className="audio-cover-badge absolute left-4 top-4 rounded-full border px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.08em] shadow-sm backdrop-blur-md">
                   Auszeit
                 </span>
               </div>
@@ -603,7 +605,7 @@ function Index() {
             </section>
 
 
-            <p className="pt-8 text-center text-[10px] font-medium uppercase text-muted-foreground">
+            <p className="section-cue-badge mx-auto mt-8 w-fit text-center text-[10px] font-semibold uppercase tracking-[0.12em]">
               Weiter zum Begleitimpuls
             </p>
 
