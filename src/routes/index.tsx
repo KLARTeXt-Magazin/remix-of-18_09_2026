@@ -534,6 +534,7 @@ function Index() {
 
 <section
   className="audio-band audio-band--ausgabe-1"
+
   aria-label="Audio"
 >
           <div className="mx-auto w-full max-w-[430px]">
@@ -640,7 +641,7 @@ function Index() {
             • PDF-Datei
            ================================================= */}
 
-        <section className="companion-band px-6 py-24">
+        <section className="companion-band companion-band--ausgabe-1 px-6 py-24">
           <div className="companion-inner mx-auto max-w-[430px] border-l-4 pl-5">
 
             <p className="text-[10px] font-medium uppercase text-muted-foreground">
