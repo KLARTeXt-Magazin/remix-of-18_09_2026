@@ -919,7 +919,7 @@ function Lichtblicke() {
 
 
                     {track.credit ? (
-                      <p className="mt-7 text-[10px] leading-5 text-muted-foreground/70">
+                      <p className="mt-7 text-[10px] leading-5 text-muted-foreground">
                         {
                           track.credit
                         }
@@ -953,7 +953,7 @@ function Lichtblicke() {
 //          nicht Teil der Audiokachel.
 //         ================================================= */}
 
-        <section className="mt-16 border-t border-border bg-sage-soft px-6 py-20">
+        <section className="pmr-band mt-16 px-6 py-20">
 
           <div className="mx-auto max-w-[430px]">
 

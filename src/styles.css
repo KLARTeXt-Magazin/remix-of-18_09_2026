@@ -1938,3 +1938,302 @@ footer.bg-primary {
 
    Dadurch bleibt die Seite ruhig UND expressiv.
    ======================================================= */
+
+
+/* =======================================================
+   19 — SECTION-FARBWELTEN (FINALE LOGIK)
+   =======================================================
+
+   Jede Audio-Welt hat:
+
+   --band-deep      tiefe Fläche
+   --band-deep-alt  leicht abweichende Fläche für den
+                    Begleittext darunter
+   --band-soft      heller Gegenpart
+   --band-pop       kleiner Farb-Pop
+   --band-ink       Textfarbe auf der Fläche
+   --band-focus     Fokusrahmen auf der Fläche
+
+   Die Audiokachel bleibt warmweißes Material.
+   ======================================================= */
+
+:root {
+  --deep-wine-550: #550000;
+  --wine-4a: #4A0404;
+  --deep-olive: #142E00;
+  --deep-violet-341: #341C67;
+  --deep-green-1b: #1B2518;
+
+  --blush-soft: #FFC5D3;
+  --pink-soft: #E484AC;
+  --honeydew: #EAFFDA;
+  --chartreuse: #D9CF12;
+  --lavender: #B6B6D6;
+  --lilac: #C4AEF4;
+  --periwinkle: #9A9FDA;
+  --mint-soft: #83BE9D;
+}
+
+
+/* Grundverhalten der Farbflächen */
+
+.audio-band,
+.companion-band {
+  --band-deep: var(--wine-4a);
+  --band-deep-alt: var(--wine-4a);
+  --band-soft: var(--blush-soft);
+  --band-pop: var(--pink-soft);
+  --band-ink: var(--pearl);
+  --band-focus: var(--blush-soft);
+
+  background: var(--band-deep);
+  color: var(--band-ink);
+
+  --section-accent: var(--band-soft);
+
+  transition:
+    background-color 600ms ease,
+    color 400ms ease;
+}
+
+.companion-band {
+  background: var(--band-deep-alt);
+  border-top-color:
+    color-mix(in srgb, var(--band-ink) 16%, transparent);
+}
+
+
+/* -------------------------------------------------------
+   AUSGABE 01 — Deep Wine + Blush
+   ------------------------------------------------------- */
+
+.audio-band--ausgabe-1,
+.companion-band--ausgabe-1 {
+  --band-deep: var(--deep-wine-550);
+  --band-deep-alt: var(--wine-4a);
+  --band-soft: var(--blush-soft);
+  --band-pop: var(--pink-soft);
+  --band-ink: var(--pearl);
+  --band-focus: var(--blush-soft);
+}
+
+
+/* -------------------------------------------------------
+   AUSGABE 02 — vier Welten
+   ------------------------------------------------------- */
+
+/* 1 · Nikolaus — Deep Olive + Honeydew */
+.audio-band.audio-tone-1,
+.companion-band.companion-tone-1 {
+  --band-deep: var(--deep-olive);
+  --band-deep-alt: #0F2400;
+  --band-soft: var(--honeydew);
+  --band-pop: var(--chartreuse);
+  --band-ink: var(--pearl);
+  --band-focus: var(--honeydew);
+
+  background: var(--band-deep);
+  color: var(--band-ink);
+}
+
+/* 2 · Heiligabend — Wine + Lavender */
+.audio-band.audio-tone-2,
+.companion-band.companion-tone-2 {
+  --band-deep: var(--wine-4a);
+  --band-deep-alt: #3A0303;
+  --band-soft: var(--lavender);
+  --band-pop: #FAA3FC;
+  --band-ink: var(--pearl);
+  --band-focus: var(--lavender);
+
+  background: var(--band-deep);
+  color: var(--band-ink);
+}
+
+/* 3 · Ein kleiner Moment — Deep Violet + Lilac */
+.audio-band.audio-tone-3,
+.companion-band.companion-tone-3 {
+  --band-deep: var(--deep-violet-341);
+  --band-deep-alt: #2A1655;
+  --band-soft: var(--lilac);
+  --band-pop: var(--periwinkle);
+  --band-ink: var(--pearl);
+  --band-focus: var(--lilac);
+
+  background: var(--band-deep);
+  color: var(--band-ink);
+}
+
+/* 4 · PMR — bewusst ruhig und hell */
+.audio-band.audio-tone-4,
+.companion-band.companion-tone-4 {
+  --band-deep: var(--pearl);
+  --band-deep-alt: #F4F7F1;
+  --band-soft: var(--mint-soft);
+  --band-pop: var(--mint-soft);
+  --band-ink: var(--deep-green-1b);
+  --band-focus: var(--deep-green-1b);
+
+  background: var(--band-deep);
+  color: var(--band-ink);
+}
+
+
+/* -------------------------------------------------------
+   TEXT AUF DEN FLÄCHEN
+   ------------------------------------------------------- */
+
+.audio-band .text-muted-foreground,
+.companion-band .text-muted-foreground,
+.audio-band .text-foreground,
+.companion-band .text-foreground {
+  color: color-mix(in srgb, var(--band-ink) 78%, transparent);
+}
+
+.companion-band h2,
+.companion-band h3 {
+  color: var(--band-ink);
+}
+
+.companion-inner {
+  border-color: color-mix(in srgb, var(--band-soft) 60%, transparent);
+}
+
+
+/* -------------------------------------------------------
+   AUDIOKACHEL — Material statt Farbe
+   ------------------------------------------------------- */
+
+.audio-player-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgb(255 255 250 / 0.94),
+      rgb(255 255 250 / 0.84)
+    );
+
+  border-color: rgb(255 255 250 / 0.92);
+  color: var(--foreground);
+
+  box-shadow:
+    0 26px 70px rgb(20 10 10 / 0.24),
+    inset 0 1px 0 rgb(255 255 255 / 0.96);
+
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+}
+
+.audio-player-card .text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+.audio-player-card .text-foreground {
+  color: var(--foreground);
+}
+
+/* Play-Button nimmt die Farbe der Welt auf */
+.audio-player-card .bg-primary {
+  background: var(--band-deep, var(--wine-4a));
+  color: var(--pearl);
+}
+
+.audio-tone-4 .audio-player-card .bg-primary {
+  background: var(--deep-green-1b);
+}
+
+
+/* -------------------------------------------------------
+   KLEINE POPS
+   ------------------------------------------------------- */
+
+.audio-band .carousel-dot {
+  background: color-mix(in srgb, var(--band-ink) 34%, transparent);
+}
+
+.audio-band .carousel-dot[aria-selected="true"] {
+  background: var(--band-pop);
+}
+
+.audio-band :focus-visible,
+.companion-band :focus-visible {
+  outline-color: var(--band-focus);
+}
+
+
+/* Download-Knopf im Begleittext */
+
+.companion-band .bg-surface {
+  background: color-mix(in srgb, var(--band-ink) 10%, transparent);
+  border-color: color-mix(in srgb, var(--band-ink) 42%, transparent);
+  color: var(--band-ink);
+}
+
+.companion-band .bg-surface:hover {
+  background: color-mix(in srgb, var(--band-ink) 18%, transparent);
+  color: var(--band-ink);
+}
+
+
+/* -------------------------------------------------------
+   PMR — ruhiger heller Bereich
+   ------------------------------------------------------- */
+
+.pmr-band {
+  background: var(--pearl);
+  color: var(--deep-green-1b);
+  border-top: 1px solid color-mix(in srgb, var(--deep-green-1b) 14%, transparent);
+}
+
+.pmr-band .text-sage-foreground,
+.pmr-band .text-foreground\/70 {
+  color: color-mix(in srgb, var(--deep-green-1b) 82%, transparent);
+}
+
+.pmr-band .border-sage\/25 {
+  border-color: color-mix(in srgb, var(--mint-soft) 55%, transparent);
+}
+
+.pmr-band :focus-visible {
+  outline-color: var(--deep-green-1b);
+}
+
+
+/* Übergangsband bleibt warm-neutral */
+
+.continue-band {
+  background: var(--linen);
+  color: var(--foreground);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .audio-band,
+  .companion-band {
+    transition: none;
+  }
+}
+
+
+/* Begleittext-Fläche leicht tiefer als die Audiofläche */
+
+.companion-band.companion-band[class*="companion-tone-"] {
+  background: var(--band-deep-alt);
+  color: var(--band-ink);
+}
+
+
+/* Begleittext: Linie und Nebentexte folgen der Farbwelt */
+
+.companion-band[class*="companion-tone-"] .companion-inner,
+.companion-band--ausgabe-1 .companion-inner {
+  border-color: color-mix(in srgb, var(--band-soft) 70%, transparent);
+}
+
+.companion-band .text-muted-foreground,
+.audio-band .text-muted-foreground {
+  color: color-mix(in srgb, var(--band-ink) 86%, transparent);
+}
+
+.audio-player-card .text-muted-foreground {
+  color: var(--muted-foreground);
+}
