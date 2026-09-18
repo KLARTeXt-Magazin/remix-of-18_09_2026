@@ -627,6 +627,7 @@ function Index() {
             audio.currentTime = seconds;
             setCurrentTime(seconds);
           }}
+          tone="wine"
         />
 
 

@@ -22,6 +22,7 @@ type ListeningModeProps = {
   onTogglePlay: () => void;
   onSkip: (seconds: number) => void;
   onSeek: (seconds: number) => void;
+  tone: "wine" | "petrol" | "violet" | "midnight";
 };
 
 function formatTime(seconds: number) {
@@ -43,6 +44,7 @@ export function ListeningMode({
   onTogglePlay,
   onSkip,
   onSeek,
+  tone,
 }: ListeningModeProps) {
   const progressId = useId();
   const progress = duration ? (currentTime / duration) * 100 : 0;
@@ -50,7 +52,7 @@ export function ListeningMode({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
-        className="listening-mode fixed inset-0 left-0 top-0 z-[70] h-[100dvh] max-h-none w-full max-w-none translate-x-0 translate-y-0 gap-0 overflow-hidden border-0 p-0 shadow-none sm:rounded-none [&>button]:hidden"
+        className={`listening-mode listening-tone-${tone} fixed inset-0 left-0 top-0 z-[70] h-[100dvh] max-h-none w-full max-w-none translate-x-0 translate-y-0 gap-0 overflow-hidden border-0 p-0 shadow-none sm:rounded-none [&>button]:hidden`}
         style={{ "--listening-image": `url(${cover})` } as CSSProperties}
       >
         <div className="listening-mode__image" aria-hidden="true" />
