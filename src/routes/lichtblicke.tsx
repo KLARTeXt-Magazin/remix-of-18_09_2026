@@ -792,7 +792,7 @@ function Lichtblicke() {
                       setActiveId
                     }
                     tone={
-                      (["petrol", "wine", "violet", "midnight"] as const)[index]
+                      (["petrol", "wine", "violet", "midnight"] as const)[index] ?? "wine"
                     }
                   />
 
