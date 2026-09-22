@@ -28,6 +28,7 @@ import {
 import coverImageNeu from "@/assets/cover-zeit-collage-v3.jpg";
 import { LiquidGlass } from "@/components/liquid-glass";
 import { InstallAction } from "@/components/install-action";
+import { HomescreenGuide } from "@/components/homescreen-guide";
 import { ListeningMode } from "@/components/listening-mode";
 import { Button } from "@/components/ui/button";
 
@@ -388,7 +389,7 @@ function Index() {
                 <img
                   src="/logo.png"
                   alt="KLARTeXt."
-                  className="h-10 w-auto"
+                  className="site-logo"
                 />
               </a>
             </div>
@@ -724,6 +725,10 @@ function Index() {
               </a>
             </nav>
 
+          </div>
+
+          <div className="mx-auto max-w-[430px]">
+            <HomescreenGuide />
           </div>
         </footer>
 

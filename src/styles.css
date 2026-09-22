@@ -2998,3 +2998,159 @@ body {
   }
 }
 
+
+/* =======================================================
+   23 — ATEM-INTRO, HOMESCREEN-ANLEITUNG, LOGO
+   ======================================================= */
+
+:root {
+  --ring: color-mix(in srgb, #3B2723 45%, transparent);
+}
+
+.breath-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: calc(2rem + env(safe-area-inset-top)) 1.5rem calc(2rem + env(safe-area-inset-bottom));
+  background: var(--primary);
+  color: var(--primary-foreground);
+  animation: breath-intro-in 600ms ease both;
+}
+
+.breath-intro.is-leaving {
+  animation: breath-intro-out 650ms ease both;
+}
+
+.breath-intro__stage {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+}
+
+.breath-intro__orb {
+  display: block;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 45%,
+    color-mix(in srgb, var(--secondary) 90%, transparent),
+    color-mix(in srgb, var(--secondary) 28%, transparent) 70%,
+    transparent 72%
+  );
+  box-shadow: 0 0 80px color-mix(in srgb, var(--secondary) 35%, transparent);
+}
+
+.breath-intro__orb.is-in {
+  animation: breath-grow ease-in-out both;
+}
+
+.breath-intro__orb.is-out {
+  animation: breath-shrink ease-in-out both;
+}
+
+.breath-intro__label {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.breath-intro__hint {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.breath-intro__skip {
+  min-height: 44px;
+  padding: 0 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--primary-foreground) 32%, transparent);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: inherit;
+  background: transparent;
+}
+
+@keyframes breath-grow {
+  from { transform: scale(0.62); opacity: 0.6; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes breath-shrink {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.62); opacity: 0.6; }
+}
+
+@keyframes breath-intro-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes breath-intro-out {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breath-intro,
+  .breath-intro__orb {
+    animation: none !important;
+  }
+}
+
+.homescreen-guide {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--primary-foreground) 22%, transparent);
+}
+
+.homescreen-guide__title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.homescreen-guide__steps {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+.homescreen-guide__steps strong {
+  font-weight: 700;
+}
+
+.homescreen-guide__note {
+  margin-top: 0.7rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.site-logo {
+  height: 2.9rem;
+  width: auto;
+  display: block;
+}
+
+.issue-sheet [data-radix-dialog-close],
+.issue-sheet button:focus-visible {
+  --tw-ring-color: color-mix(in srgb, #3B2723 40%, transparent);
+}

@@ -35,6 +35,7 @@ import {
 
 import { LiquidGlass } from "@/components/liquid-glass";
 import { InstallAction } from "@/components/install-action";
+import { HomescreenGuide } from "@/components/homescreen-guide";
 import { Button } from "@/components/ui/button";
 
 import {
@@ -523,7 +524,7 @@ function Lichtblicke() {
               <img
                 src="/logo.png"
                 alt="KLARTeXt."
-                className="h-10 w-auto"
+                className="site-logo"
               />
             </a>
 
@@ -1145,6 +1146,10 @@ function Lichtblicke() {
 
             </nav>
 
+          </div>
+
+          <div className="mx-auto max-w-[430px]">
+            <HomescreenGuide />
           </div>
 
         </footer>
