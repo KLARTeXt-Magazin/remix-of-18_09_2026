@@ -15,5 +15,5 @@
 - [x] Mobile und Desktop-Ansicht nach der Neugestaltung prüfen
 - [x] Verspielten Audiotitel groß unter dem Cover platzieren
 - [x] Audio-Rondell ohne hart abgeschnittene Karten ausrichten und prüfen
-- [ ] Cloud-Dancer-, Espresso- und Peony-Magazinoptik auf beide Ausgaben übertragen
-- [ ] Neue Magazinoptik mobil und am Desktop prüfen
+- [x] Cloud-Dancer-, Espresso- und Peony-Magazinoptik auf beide Ausgaben übertragen
+- [x] Neue Magazinoptik mobil und am Desktop prüfen

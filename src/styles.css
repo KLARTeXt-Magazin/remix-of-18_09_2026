@@ -2763,7 +2763,7 @@ body {
 .hero-title {
   color: var(--foreground);
   text-transform: uppercase;
-  font-size: clamp(3.2rem, 13vw, 5.4rem);
+  font-size: clamp(2.65rem, 11vw, 5.4rem);
   line-height: 0.88;
 }
 
@@ -2772,6 +2772,7 @@ body {
 .audio-band[class*="audio-tone-"] {
   background: transparent;
   border: 0;
+  overflow-x: clip;
 }
 
 .audio-band::before,
