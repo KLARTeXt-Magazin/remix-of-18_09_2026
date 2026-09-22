@@ -23,10 +23,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Download, Menu } from "lucide-react";
 
-import coverMoment from "../assets/cover-pmr-abstract-v2.jpg";
-import coverNikolausNeu from "../assets/cover-nikolaus-abstract-v2.jpg";
-import coverGrussNeu from "../assets/cover-heiligabend-abstract-v2.jpg";
-import coverMomentNeu from "../assets/cover-moment-abstract-v2.jpg";
+import coverMoment from "../assets/cover-pmr-collage-v3.jpg";
+import coverNikolausNeu from "../assets/cover-nikolaus-collage-v3.jpg";
+import coverGrussNeu from "../assets/cover-heiligabend-collage-v3.jpg";
+import coverMomentNeu from "../assets/cover-moment-collage-v3.jpg";
 
 import {
   AudioCard,
@@ -175,7 +175,8 @@ const tracks: AudioTrack[] = [
       "Ein kurzer Moment aus dem Adventskalender – zum Anhören am 6. Dezember.",
     cover: coverNikolausNeu,
     coverAlt:
-      "Abstraktes petrolfarbenes Stillleben mit Büttenpapier, Keramik, Leinen und winterlichem Zweig",
+      "Editoriales Stillleben aus petrolfarbenem Papier, eisblauem Transparentpapier, Silberfaden und roter Beere",
+    coverWord: "LICHT BLICK.",
     src: "/audio/2026-q4_extra01.m4a",
     ...(PREVIEW_UNLOCKED
       ? {}
@@ -200,7 +201,8 @@ const tracks: AudioTrack[] = [
       "Der zweite Lichtblick aus dem Adventskalender – zum Anhören an Heiligabend.",
     cover: coverGrussNeu,
     coverAlt:
-      "Abstraktes weinrotes Stillleben mit Wollstoff, Lavendelpapier, Keramikschale und Kerze",
+      "Editoriales Stillleben aus weinrotem Samt, lavendelfarbenem Acryl und rosafarbener Kerze",
+    coverWord: "HEUTE GENUG.",
     src: "/audio/2026-q4_extra02.m4a",
     ...(PREVIEW_UNLOCKED
       ? {}
@@ -225,7 +227,8 @@ const tracks: AudioTrack[] = [
       "Eine kurze Auszeit für dich, jederzeit abrufbar. Den Impuls kannst du dir auch ausdrucken.",
     cover: coverMomentNeu,
     coverAlt:
-      "Abstraktes violettes Stillleben mit gerissenem Papier, Keramikring, Faden und gefaltetem Stoff",
+      "Abstrakte Collage aus auberginefarbenem Papier, Flieder, blauem Band und pinkfarbenem Blütenblatt",
+    coverWord: "NUR FÜR DICH.",
     src: "/audio/2026-q4_extra03.m4a",
     downloadUrl:
       "/pdf/2026-q4_Auszeit01.pdf",
@@ -245,7 +248,8 @@ const tracks: AudioTrack[] = [
       "Eine kurze Übung: Muskelgruppen bewusst anspannen und wieder lösen. Die ausführliche Anleitung findest du weiter unten.",
     cover: coverMoment,
     coverAlt:
-      "Abstraktes mitternachtsblaues Stoffbild mit geraffter Spannung und lavendelfarbenem Keramikstein",
+      "Materialstudie aus gerafftem mitternachtsblauem Stoff, lavendelfarbenem Band und mintfarbenem Stein",
+    coverWord: "LÖSEN. LOS.",
     src:
       "/audio/2026-q4_extra03.m4a",
     credit:

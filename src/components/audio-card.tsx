@@ -37,6 +37,7 @@ export type AudioTrack = {
   note?: string;
   cover: string;
   coverAlt: string;
+  coverWord?: string;
   src: string;
   duration?: string;
   credit?: string;
@@ -387,7 +388,7 @@ export function AudioCard({
             COVER-BEREICH
            ================================================= */}
 
-        <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-[0.95rem]">
+        <div className="audio-cover-layout relative z-10 aspect-[4/3] overflow-hidden rounded-[0.95rem]">
 
           <img
             src={track.cover}
@@ -395,12 +396,18 @@ export function AudioCard({
             width={1024}
             height={1024}
             loading="lazy"
-            className={`h-full w-full object-cover transition-all duration-700 ${
+            className={`audio-cover-image h-full w-full object-cover transition-all duration-700 ${
               unlocked
                 ? ""
                 : "scale-105 blur-lg saturate-50"
             }`}
           />
+
+          {track.coverWord ? (
+            <span className="cover-wordmark" aria-hidden="true">
+              {track.coverWord}
+            </span>
+          ) : null}
 
 
           {/* Kategorie / Datum */}
