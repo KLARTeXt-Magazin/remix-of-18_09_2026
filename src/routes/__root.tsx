@@ -166,7 +166,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Urbanist:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600&family=Urbanist:wght@400;500;600;700&display=swap",
       },
     ],
   }),

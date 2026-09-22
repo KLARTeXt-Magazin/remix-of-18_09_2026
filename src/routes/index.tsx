@@ -25,7 +25,7 @@ import {
   Play,
 } from "lucide-react";
 
-import coverImageNeu from "@/assets/cover-zeit-abstract-v2.jpg";
+import coverImageNeu from "@/assets/cover-zeit-collage-v3.jpg";
 import { LiquidGlass } from "@/components/liquid-glass";
 import { InstallAction } from "@/components/install-action";
 import { ListeningMode } from "@/components/listening-mode";
@@ -547,14 +547,18 @@ function Index() {
             >
 
               {/* Audio-Cover */}
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[0.95rem]">
+              <div className="audio-cover-layout relative aspect-[4/3] overflow-hidden rounded-[0.95rem]">
                 <img
                   src={coverImageNeu}
-                  alt="Abstraktes Stillleben aus rosafarbenem Büttenpapier, Weinrot, Leinen und feinem Faden"
+                  alt="Editoriale Collage aus weinrotem Papier, rosafarbenem Organza, feinen Blüten und blauem Glas"
                   width={1024}
                   height={1024}
-                  className="h-full w-full object-cover"
+                  className="audio-cover-image h-full w-full object-cover"
                 />
+
+                <span className="cover-wordmark" aria-hidden="true">
+                  ZEIT FÜR DICH.
+                </span>
 
                 <span className="audio-cover-badge absolute left-4 top-4 rounded-full border px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.08em] shadow-sm backdrop-blur-md">
                   Auszeit

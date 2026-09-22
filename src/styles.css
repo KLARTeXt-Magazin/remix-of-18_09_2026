@@ -121,6 +121,7 @@
   /* Schriften */
   --font-display: "Urbanist", sans-serif;
   --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-accent: "Pixelify Sans", sans-serif;
 }
 
 
@@ -2584,5 +2585,99 @@ footer.bg-primary {
 
 .issue-panel {
   background: var(--neutral-pearl);
+}
+
+
+/* =======================================================
+   21 — EDITORIAL COLLAGE + PLAYFUL TYPE
+   =======================================================
+
+   Eine helle, ruhige Magazinbasis trifft auf ein einziges
+   typografisches Farbfeld pro Cover. Die Collagen bleiben
+   haptisch und abstrakt; die Pixel-Schrift ist bewusst nur
+   ein Akzent und wird nicht für Lesetext verwendet.
+   ======================================================= */
+
+.audio-cover-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(5.6rem, 28%, 7.25rem);
+  gap: 0.45rem;
+  background: var(--neutral-mist);
+}
+
+.audio-cover-image {
+  min-width: 0;
+}
+
+.cover-wordmark {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0.65rem 0.45rem;
+  overflow-wrap: anywhere;
+  text-align: center;
+  font-family: var(--font-accent);
+  font-size: clamp(1.05rem, 5.2vw, 1.55rem);
+  font-weight: 600;
+  line-height: 0.92;
+  color: var(--band-pop);
+  background: var(--band-deep);
+}
+
+.audio-player-card {
+  border-radius: 0.8rem;
+  padding: 0.45rem;
+  box-shadow:
+    0 10px 30px color-mix(in srgb, var(--foreground) 7%, transparent),
+    inset 0 1px 0 var(--neutral-pearl);
+}
+
+.audio-player-card .audio-cover-layout {
+  border-radius: 0.55rem;
+}
+
+.audio-player-card .audio-cover-badge {
+  left: 0.7rem;
+  top: 0.7rem;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.55rem;
+  box-shadow: none;
+}
+
+.audio-player-card > div:last-of-type {
+  padding-inline: 0.8rem;
+}
+
+.audio-band {
+  position: relative;
+}
+
+.audio-band::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 1.2rem auto auto max(1rem, calc(50% - 215px));
+  width: 2.5rem;
+  height: 0.5rem;
+  background: var(--band-pop);
+}
+
+.companion-inner {
+  border-left-width: 1px;
+  border-color: var(--band-deep);
+}
+
+.companion-band h2,
+.companion-band [class*="font-display"] {
+  text-wrap: balance;
+}
+
+@media (min-width: 640px) {
+  .cover-wordmark {
+    font-size: 1.45rem;
+  }
 }
 
