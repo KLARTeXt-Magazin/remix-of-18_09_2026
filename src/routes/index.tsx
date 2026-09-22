@@ -352,6 +352,7 @@ function Index() {
             • Titel
            ================================================= */}
 
+        <div className="editorial-stage editorial-stage--single">
         <section
           className={`hero-presentation mx-auto w-full max-w-[430px] px-5 pb-12 sm:px-7 ${
             hasScrolled || isPlaying
@@ -556,10 +557,6 @@ function Index() {
                   className="audio-cover-image h-full w-full object-cover"
                 />
 
-                <span className="cover-wordmark" aria-hidden="true">
-                  ZEIT FÜR DICH.
-                </span>
-
                 <span className="audio-cover-badge absolute left-4 top-4 rounded-full border px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.08em] shadow-sm backdrop-blur-md">
                   Auszeit
                 </span>
@@ -572,8 +569,8 @@ function Index() {
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4">
                   <div className="min-w-0">
 
-                    <h2 className="truncate font-display text-2xl font-medium">
-                      Zeit für Dich
+                    <h2 className="audio-art-title">
+                      ZEIT FÜR DICH.
                     </h2>
 
                     <p className="mt-1 truncate text-xs text-muted-foreground">
@@ -615,6 +612,8 @@ function Index() {
 
           </div>
         </section>
+
+        </div>
 
         <ListeningMode
           open={listeningOpen}
