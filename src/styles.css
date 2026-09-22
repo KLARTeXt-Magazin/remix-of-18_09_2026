@@ -2781,17 +2781,19 @@ body {
 }
 
 .audio-player-card {
-  background: var(--primary);
-  border-color: color-mix(in srgb, var(--secondary) 28%, transparent);
-  color: var(--primary-foreground);
+  background: var(--card);
+  border-color: var(--neutral-line);
+  color: var(--foreground);
   border-radius: 1.5rem;
   padding: 0.65rem;
-  box-shadow: 0 24px 54px color-mix(in srgb, var(--foreground) 24%, transparent);
+  box-shadow:
+    0 20px 44px color-mix(in srgb, var(--foreground) 12%, transparent),
+    inset 0 1px 0 #FFFFFF;
 }
 
 .audio-player-card .audio-cover-layout {
   border-radius: 1rem;
-  background: var(--secondary);
+  background: var(--neutral-mist);
 }
 
 .audio-player-card .audio-cover-image {
@@ -2810,7 +2812,7 @@ body {
 
 .audio-player-card .audio-art-title {
   max-width: 10ch;
-  color: var(--primary-foreground);
+  color: var(--foreground);
   font-size: clamp(2.55rem, 11vw, 4rem);
   line-height: 0.86;
   text-transform: uppercase;
@@ -2818,26 +2820,26 @@ body {
 
 .audio-track-title {
   margin-top: 0.75rem;
-  color: var(--audio-accent, var(--secondary));
+  color: var(--audio-accent-ink, var(--foreground));
   font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.45;
 }
 
 .audio-player-card .text-muted-foreground {
-  color: color-mix(in srgb, var(--primary-foreground) 72%, transparent);
+  color: var(--muted-foreground);
 }
 
 .audio-player-card .bg-primary,
 .audio-tone-4 .audio-player-card .bg-primary {
-  background: var(--audio-accent, var(--secondary));
-  color: var(--foreground);
+  background: var(--audio-accent-ink, var(--primary));
+  color: #F8F6F2;
   box-shadow: none;
 }
 
 .audio-player-card .bg-primary:hover,
 .audio-tone-4 .audio-player-card .bg-primary:hover {
-  background: color-mix(in srgb, var(--audio-accent, var(--secondary)) 88%, var(--primary-foreground));
+  background: color-mix(in srgb, var(--audio-accent-ink, var(--primary)) 86%, var(--audio-accent, var(--secondary)));
 }
 
 .audio-tone-1,
