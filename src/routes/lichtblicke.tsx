@@ -707,8 +707,6 @@ function Lichtblicke() {
 
         </section>
 
-        </div>
-
 
         {/* =================================================
             AUDIO-CAROUSEL
@@ -841,6 +839,8 @@ function Lichtblicke() {
           </div>
 
         </section>
+
+        </div>
 
 
         {/* =================================================
