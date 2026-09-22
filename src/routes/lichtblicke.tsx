@@ -729,7 +729,7 @@ function Lichtblicke() {
   aria-label="Audio-Karussell"
 >
 
-          <div className="audio-carousel-shell mx-auto w-full max-w-[430px]">
+          <div className="audio-carousel-shell mx-auto w-full max-w-[860px]">
           <div
             ref={scrollerRef}
             role="group"
@@ -782,7 +782,7 @@ function Lichtblicke() {
                       index
                     ] = node;
                   }}
-                  className="w-[86%] max-w-[380px] shrink-0 snap-start"
+                  className="w-[calc(100%-2.5rem)] max-w-[380px] shrink-0 snap-start"
                 >
 
                   <AudioCard

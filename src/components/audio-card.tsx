@@ -388,7 +388,7 @@ export function AudioCard({
             COVER-BEREICH
            ================================================= */}
 
-        <div className="audio-cover-layout relative z-10 aspect-[4/3] overflow-hidden rounded-[0.95rem]">
+        <div className="audio-cover-layout audio-cover-layout--image-only relative z-10 aspect-[4/3] overflow-hidden rounded-[0.95rem]">
 
           <img
             src={track.cover}
@@ -402,13 +402,6 @@ export function AudioCard({
                 : "scale-105 blur-lg saturate-50"
             }`}
           />
-
-          {track.coverWord ? (
-            <span className="cover-wordmark" aria-hidden="true">
-              {track.coverWord}
-            </span>
-          ) : null}
-
 
           {/* Kategorie / Datum */}
 
@@ -449,8 +442,8 @@ export function AudioCard({
 
           {/* Audio-Titel */}
 
-          <h3 className="font-display text-2xl font-medium leading-tight">
-            {track.title}
+          <h3 className={track.coverWord ? "audio-art-title" : "font-display text-2xl font-medium leading-tight"}>
+            {track.coverWord ?? track.title}
           </h3>
 
 
