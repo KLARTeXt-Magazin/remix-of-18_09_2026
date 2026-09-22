@@ -68,7 +68,7 @@ const SheetContent = React.forwardRef<
 >
   {children}
 
-  <SheetPrimitive.Close className="absolute right-6 top-6 z-[100] flex size-11 items-center justify-center rounded-full border border-panel-border bg-surface text-foreground shadow-sm backdrop-blur-md transition-all hover:bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
+  <SheetPrimitive.Close className="absolute right-6 top-6 z-[100] flex size-11 items-center justify-center rounded-full border border-foreground/15 bg-surface text-foreground shadow-sm backdrop-blur-md transition-all hover:bg-background focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40 focus-visible:ring-offset-2">
     <X className="h-4 w-4" />
     <span className="sr-only">Menü schließen</span>
   </SheetPrimitive.Close>
