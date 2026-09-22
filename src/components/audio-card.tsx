@@ -446,6 +446,10 @@ export function AudioCard({
             {track.coverWord ?? track.title}
           </h3>
 
+          {track.coverWord ? (
+            <p className="audio-track-title">{track.title}</p>
+          ) : null}
+
 
           {unlocked ? (
 
