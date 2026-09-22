@@ -13,3 +13,5 @@
 - [x] Audio-Cover in eine neutral-verspielte Editorial-Collagewelt überführen
 - [x] Typografische Farbmodule und asymmetrischen Rhythmus auf beiden Ausgaben ergänzen
 - [x] Mobile und Desktop-Ansicht nach der Neugestaltung prüfen
+- [x] Verspielten Audiotitel groß unter dem Cover platzieren
+- [x] Audio-Rondell ohne hart abgeschnittene Karten ausrichten und prüfen

@@ -2609,6 +2609,10 @@ footer.bg-primary {
   min-width: 0;
 }
 
+.audio-cover-layout--image-only {
+  display: block;
+}
+
 .cover-wordmark {
   position: relative;
   z-index: 1;
@@ -2626,6 +2630,16 @@ footer.bg-primary {
   line-height: 0.92;
   color: var(--band-pop);
   background: var(--band-deep);
+}
+
+.audio-art-title {
+  max-width: 9ch;
+  font-family: var(--font-accent);
+  font-size: clamp(2.7rem, 13vw, 4rem);
+  font-weight: 600;
+  line-height: 0.86;
+  color: var(--band-deep);
+  text-wrap: balance;
 }
 
 .audio-player-card {
@@ -2679,6 +2693,10 @@ footer.bg-primary {
 @media (min-width: 640px) {
   .cover-wordmark {
     font-size: 1.45rem;
+  }
+
+  .audio-art-title {
+    font-size: 3.4rem;
   }
 }
 
