@@ -2925,14 +2925,14 @@ body {
 }
 
 .continue-band {
-  background: var(--secondary);
+  background: var(--neutral-linen-cool);
   color: var(--foreground);
   border: 0;
 }
 
 .issue-entry-current {
-  background: var(--secondary);
-  border-color: var(--secondary);
+  background: var(--neutral-mist);
+  border-color: var(--neutral-mist);
   box-shadow: inset 4px 0 0 var(--primary);
 }
 
