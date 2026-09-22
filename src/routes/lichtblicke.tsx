@@ -176,7 +176,7 @@ const tracks: AudioTrack[] = [
     cover: coverNikolausNeu,
     coverAlt:
       "Editoriales Stillleben aus petrolfarbenem Papier, eisblauem Transparentpapier, Silberfaden und roter Beere",
-    coverWord: "KLEINER LICHTBLICK.",
+    coverWord: "LICHT BLICK.",
     src: "/audio/2026-q4_extra01.m4a",
     ...(PREVIEW_UNLOCKED
       ? {}

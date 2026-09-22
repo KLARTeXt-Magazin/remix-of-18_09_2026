@@ -2617,7 +2617,8 @@ footer.bg-primary {
   justify-content: center;
   min-width: 0;
   padding: 0.65rem 0.45rem;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
   text-align: center;
   font-family: var(--font-accent);
   font-size: clamp(1.05rem, 5.2vw, 1.55rem);
