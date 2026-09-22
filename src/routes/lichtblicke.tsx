@@ -21,7 +21,7 @@
 
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Download, Menu } from "lucide-react";
+import { Download, Menu, Smartphone } from "lucide-react";
 
 import coverMoment from "../assets/cover-pmr-collage-v3.jpg";
 import coverNikolausNeu from "../assets/cover-nikolaus-collage-v3.jpg";
@@ -232,7 +232,7 @@ const tracks: AudioTrack[] = [
     coverWord: "NUR FÜR DICH.",
     src: "/audio/2026-q4_extra03.m4a",
     downloadUrl:
-      "/pdf/2026-q4_Auszeit01.pdf",
+      "/pdf/moment-fuer-dich-begleitimpuls.pdf",
     downloadLabel:
       "Impuls zum Downloaden",
     credit:
@@ -530,6 +530,18 @@ function Lichtblicke() {
 
 
             {/* Ausgaben-Menü */}
+            <div className="flex items-center gap-2">
+              <Button
+                asChild
+                variant="outline"
+                className="install-guide-jump h-10 rounded-full px-3"
+              >
+                <a href="#app-installieren" aria-label="Zur Anleitung: Als App speichern">
+                  <Smartphone className="size-4" />
+                  <span>App speichern</span>
+                </a>
+              </Button>
+
             <Sheet>
 
               <SheetTrigger asChild>
@@ -663,6 +675,7 @@ function Lichtblicke() {
                 </LiquidGlass>
               </SheetContent>
             </Sheet>
+            </div>
 
           </div>
         </header>
@@ -1056,7 +1069,7 @@ function Lichtblicke() {
               className="mt-8 h-12 rounded-full border-sage/45 bg-background/45 px-5 text-sage-foreground shadow-none"
             >
               <a
-                href="/pdf/2026-q4_Auszeit01.pdf"
+                href="/pdf/pmr-spannung-trifft-entspannung.pdf"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -3109,6 +3109,7 @@ body {
 }
 
 .homescreen-guide {
+  scroll-margin-top: calc(5.5rem + env(safe-area-inset-top));
   margin-top: 2.25rem;
   padding-top: 1.5rem;
   border-top: 1px solid color-mix(in srgb, var(--primary-foreground) 22%, transparent);
@@ -3148,6 +3149,28 @@ body {
   height: 2.9rem;
   width: auto;
   display: block;
+}
+
+.install-guide-jump {
+  border-color: color-mix(in srgb, var(--primary) 28%, transparent);
+  background: var(--neutral-pearl);
+  color: var(--foreground);
+  box-shadow: 0 5px 16px color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.install-guide-jump:hover {
+  background: var(--neutral-mist);
+}
+
+@media (max-width: 380px) {
+  .install-guide-jump span {
+    display: none;
+  }
+
+  .install-guide-jump {
+    width: 2.5rem;
+    padding-inline: 0;
+  }
 }
 
 .issue-sheet [data-radix-dialog-close],
