@@ -46,7 +46,7 @@ export function BreathIntro() {
 
   if (!isVisible) return null;
 
-  const current = PHASES[phase];
+  const current = PHASES[phase] ?? PHASES[0];
 
   const skip = () => {
     timers.current.forEach((id) => window.clearTimeout(id));
