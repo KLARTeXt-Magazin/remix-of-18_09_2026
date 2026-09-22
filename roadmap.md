@@ -10,3 +10,6 @@
 - [x] Ausgaben-Slide ruhiger und farbärmer gestalten
 - [x] Header einheitlich app-artig bis in den oberen Bildschirmbereich führen
 - [x] Mobile und Desktop-Vorschau inklusive Höransicht prüfen
+- [ ] Audio-Cover in eine neutral-verspielte Editorial-Collagewelt überführen
+- [ ] Typografische Farbmodule und asymmetrischen Rhythmus auf beiden Ausgaben ergänzen
+- [ ] Mobile und Desktop-Ansicht nach der Neugestaltung prüfen
