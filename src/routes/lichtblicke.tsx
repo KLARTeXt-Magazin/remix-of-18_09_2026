@@ -679,6 +679,7 @@ function Lichtblicke() {
             • Beschreibung
            ================================================= */}
 
+        <div className="editorial-stage">
         <section
           className={`hero-presentation mx-auto w-full max-w-[430px] px-5 pb-10 sm:px-7 ${
             presentationCompact
@@ -705,6 +706,8 @@ function Lichtblicke() {
 
 
         </section>
+
+        </div>
 
 
         {/* =================================================
