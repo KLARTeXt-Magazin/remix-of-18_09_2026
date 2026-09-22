@@ -20,3 +20,6 @@
 - [x] Peony pro Audio durch neutral-bunte Akzentfarben variieren
 - [x] Rondell und wechselnden Begleitimpuls sichtbar miteinander verbinden
 - [x] Echte Audiotitel auf den Audiokarten ergänzen
+- [x] Atem-Intro beim Öffnen der installierten App
+- [x] Kurzanleitung „Als App speichern“ in der Fußzeile
+- [x] Rosa Rahmen am Schließen-Knopf entfernt, Logo leicht vergrößert
