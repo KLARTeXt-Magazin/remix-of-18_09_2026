@@ -17,3 +17,6 @@
 - [x] Audio-Rondell ohne hart abgeschnittene Karten ausrichten und prüfen
 - [x] Cloud-Dancer-, Espresso- und Peony-Magazinoptik auf beide Ausgaben übertragen
 - [x] Neue Magazinoptik mobil und am Desktop prüfen
+- [x] Peony pro Audio durch neutral-bunte Akzentfarben variieren
+- [x] Rondell und wechselnden Begleitimpuls sichtbar miteinander verbinden
+- [x] Echte Audiotitel auf den Audiokarten ergänzen

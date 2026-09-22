@@ -833,8 +833,8 @@ function Lichtblicke() {
             </div>
           </div>
 
-          <p className="px-5 pt-2 text-center text-xs tracking-[0.02em] text-muted-foreground sm:px-7">
-            Zum Wechseln seitlich wischen oder einen Punkt antippen
+          <p className="carousel-change-hint px-5 pt-2 text-center text-xs sm:px-7">
+            Mitwischen: Audio, Farbe und Begleitimpuls wechseln gemeinsam
           </p>
           </div>
 
@@ -884,8 +884,8 @@ function Lichtblicke() {
                     }`}
                   >
 
-                    <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-muted-foreground">
-                      Begleitimpuls · {track.eyebrow}
+                    <p className="companion-kicker text-[10px] font-medium uppercase tracking-[0.12em]">
+                      Audio {index + 1} · Begleitimpuls · {track.eyebrow}
                     </p>
 
                     {track.quote ? (
