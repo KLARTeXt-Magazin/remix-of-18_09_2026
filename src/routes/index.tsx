@@ -388,7 +388,7 @@ function Index() {
                 <img
                   src="/logo.png"
                   alt="KLARTeXt."
-                  className="h-10 w-auto"
+                  className="site-logo"
                 />
               </a>
             </div>
@@ -724,6 +724,10 @@ function Index() {
               </a>
             </nav>
 
+          </div>
+
+          <div className="mx-auto max-w-[430px]">
+            <HomescreenGuide />
           </div>
         </footer>
 
