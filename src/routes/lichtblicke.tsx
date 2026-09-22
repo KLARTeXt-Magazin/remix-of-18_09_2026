@@ -35,6 +35,7 @@ import {
 
 import { LiquidGlass } from "@/components/liquid-glass";
 import { InstallAction } from "@/components/install-action";
+import { HomescreenGuide } from "@/components/homescreen-guide";
 import { Button } from "@/components/ui/button";
 
 import {
