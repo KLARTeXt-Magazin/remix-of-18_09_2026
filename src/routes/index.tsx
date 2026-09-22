@@ -23,6 +23,7 @@ import {
   Download,
   Menu,
   Play,
+  Smartphone,
 } from "lucide-react";
 
 import coverImageNeu from "@/assets/cover-zeit-collage-v3.jpg";
@@ -396,6 +397,18 @@ function Index() {
 
 
             {/* Ausgaben-Menü */}
+            <div className="flex items-center gap-2">
+              <Button
+                asChild
+                variant="outline"
+                className="install-guide-jump h-10 rounded-full px-3"
+              >
+                <a href="#app-installieren" aria-label="Zur Anleitung: Als App speichern">
+                  <Smartphone className="size-4" />
+                  <span>App speichern</span>
+                </a>
+              </Button>
+
             <Sheet>
               <SheetTrigger asChild>
                 <Button
@@ -504,6 +517,7 @@ function Index() {
                 </LiquidGlass>
               </SheetContent>
             </Sheet>
+            </div>
             </div>
 
           </header>
@@ -669,7 +683,7 @@ function Index() {
               className="mt-9 h-12 rounded-full border-border bg-surface px-5 shadow-none"
             >
               <a
-                href="/pdf/2026-q3_Auszeit01.pdf"
+                href="/pdf/zeit-fuer-dich-begleitimpuls.pdf"
                 target="_blank"
                 rel="noreferrer"
               >

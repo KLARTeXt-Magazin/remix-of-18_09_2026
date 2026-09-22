@@ -23,3 +23,5 @@
 - [x] Atem-Intro beim Öffnen der installierten App
 - [x] Kurzanleitung „Als App speichern“ in der Fußzeile
 - [x] Rosa Rahmen am Schließen-Knopf entfernt, Logo leicht vergrößert
+- [x] Drei Begleitimpulse optisch vereinheitlichen und passend verknüpfen
+- [x] Sichtbaren Sprung zur Homebildschirm-Anleitung im Kopfbereich ergänzen

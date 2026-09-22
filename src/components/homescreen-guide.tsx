@@ -3,7 +3,11 @@
  */
 export function HomescreenGuide() {
   return (
-    <section className="homescreen-guide" aria-labelledby="homescreen-guide-title">
+    <section
+      id="app-installieren"
+      className="homescreen-guide"
+      aria-labelledby="homescreen-guide-title"
+    >
       <p id="homescreen-guide-title" className="homescreen-guide__title">
         Als App speichern
       </p>
