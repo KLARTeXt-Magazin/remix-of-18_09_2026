@@ -3146,16 +3146,27 @@ body {
 }
 
 .site-logo {
-  height: 2.9rem;
-  width: auto;
+  width: 8.4rem;
+  height: auto;
+  max-width: 100%;
   display: block;
+  object-fit: contain;
 }
 
 .install-guide-jump {
+  height: 2rem;
+  padding-inline: 0.65rem;
   border-color: color-mix(in srgb, var(--primary) 28%, transparent);
   background: var(--neutral-pearl);
   color: var(--foreground);
-  box-shadow: 0 5px 16px color-mix(in srgb, var(--foreground) 10%, transparent);
+  font-size: 0.65rem;
+  font-weight: 600;
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--foreground) 8%, transparent);
+}
+
+.install-guide-jump svg {
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 .install-guide-jump:hover {
