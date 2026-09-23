@@ -25,3 +25,6 @@
 - [x] Rosa Rahmen am Schließen-Knopf entfernt, Logo leicht vergrößert
 - [x] Drei Begleitimpulse optisch vereinheitlichen und passend verknüpfen
 - [x] Sichtbaren Sprung zur Homebildschirm-Anleitung im Kopfbereich ergänzen
+- [x] Atem-Intro als moderne grafische Papierform statt Glas-Orb gestalten
+- [x] Obere Bedienleiste auf iPhone und iPad sicher anklickbar machen
+- [x] Lichtblicke-Titel am Tablet begrenzen und PMR-Formulierung überarbeiten

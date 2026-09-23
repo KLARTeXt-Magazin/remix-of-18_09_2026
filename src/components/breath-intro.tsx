@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 /**
  * Ruhige Atem-Sequenz beim Öffnen der App (nur als installierte Web-App).
@@ -62,18 +63,23 @@ export function BreathIntro() {
       aria-live="polite"
     >
       <div className="breath-intro__stage">
-        <span
-          className={`breath-intro__orb${current.grow ? " is-in" : " is-out"}`}
+        <div
+          className={`breath-intro__art${current.grow ? " is-in" : " is-out"}`}
           style={{ animationDuration: `${current.duration}ms` }}
           aria-hidden="true"
-        />
+        >
+          <span className="breath-intro__shape breath-intro__shape--leaf" />
+          <span className="breath-intro__shape breath-intro__shape--arc" />
+          <span className="breath-intro__shape breath-intro__shape--sun" />
+          <span className="breath-intro__shape breath-intro__shape--stem" />
+        </div>
         <p className="breath-intro__label">{current.label}</p>
         <p className="breath-intro__hint">{current.hint}</p>
       </div>
 
-      <button type="button" className="breath-intro__skip" onClick={skip}>
+      <Button type="button" variant="ghost" className="breath-intro__skip" onClick={skip}>
         Überspringen
-      </button>
+      </Button>
     </div>
   );
 }

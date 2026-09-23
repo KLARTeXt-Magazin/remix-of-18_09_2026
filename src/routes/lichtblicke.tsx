@@ -250,7 +250,7 @@ const tracks: AudioTrack[] = [
     cover: coverMoment,
     coverAlt:
       "Materialstudie aus gerafftem mitternachtsblauem Stoff, lavendelfarbenem Band und mintfarbenem Stein",
-    coverWord: "LÖSEN. LOS.",
+    coverWord: "ANSPANNEN. LOSLASSEN.",
     src:
       "/audio/2026-q4_extra03.m4a",
     credit:
@@ -512,7 +512,7 @@ function Lichtblicke() {
               : ""
           }`}
         >
-          <div className="mx-auto grid h-16 w-full max-w-[430px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:px-7">
+          <div className="site-header-inner mx-auto grid w-full max-w-[430px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:px-7">
 
             <a
               href="https://www.magazin-klartext.de/"
