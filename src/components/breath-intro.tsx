@@ -68,10 +68,9 @@ export function BreathIntro() {
           style={{ animationDuration: `${current.duration}ms` }}
           aria-hidden="true"
         >
-          <span className="breath-intro__shape breath-intro__shape--leaf" />
-          <span className="breath-intro__shape breath-intro__shape--arc" />
-          <span className="breath-intro__shape breath-intro__shape--sun" />
-          <span className="breath-intro__shape breath-intro__shape--stem" />
+          <span className="breath-blob breath-blob--outer" />
+          <span className="breath-blob breath-blob--mid" />
+          <span className="breath-blob breath-blob--core" />
         </div>
         <p className="breath-intro__label">{current.label}</p>
         <p className="breath-intro__hint">{current.hint}</p>
