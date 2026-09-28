@@ -3279,4 +3279,4 @@ body {
   66% { border-radius: 52% 48% 38% 62% / 42% 55% 45% 58%; transform: rotate(-30deg); }
 }
 @media (prefers-reduced-motion: reduce) { .breath-blob { animation: none; border-radius: 50%; } }
-.audio-player-card .audio-art-title { max-width: 100%; font-size: clamp(1.9rem, 8.5vw, 3.2rem); hyphens: manual; }
+.audio-player-card .audio-art-title { max-width: 100%; font-size: clamp(1.8rem, 8vw, 2.7rem); hyphens: manual; }
